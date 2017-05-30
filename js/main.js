@@ -28,19 +28,44 @@ pet.name = document.getElementById('name').value;
  });
 
 var feedButton = document.getElementById('feed');
+feedButton.addEventListener("click", function(){
+
+	pet.hunger-=2;
+	hunger_num.innerHTML= pet.hunger;
+
+
+})
 var lightsButton = document.getElementById('lights');
+lightsButton.addEventListener("click", function(){
+
+	pet.sleepiness-=2;
+	sleep_num.innerHTML=pet.sleepiness;
+
+})
 var playButton = document.getElementById('play');
+playButton.addEventListener("click", function(){
+
+	pet.boredom-=2;
+	bored_num.innerHTML=pet.boredom;
+
+})
 
  var reset = function() {
 
  		pet.hunger = 1;
 		pet.sleepiness = 1;
 		pet.boredom = 1;
+		pet.age = 1;
 		hunger_num.innerHTML= pet.hunger;
-	sleep_num.innerHTML = pet.sleepiness;
-	bored_num.innerHTML = pet.boredom;
+	    sleep_num.innerHTML = pet.sleepiness;
+	    bored_num.innerHTML = pet.boredom;
+	    age_num.innerHTML = pet.age;
+
 		game_status.innerHTML = "LEVEL 1";
-		setInterval(setIncrease, 2000);
+
+		
+		
+
 
 
 
@@ -65,11 +90,11 @@ var playButton = document.getElementById('play');
 	sleep_num.innerHTML = pet.sleepiness;
 	bored_num.innerHTML = pet.boredom;
 
-	if(pet.hunger === 10 || pet.sleepiness === 10 || boredom === 10){
+	if(pet.hunger === 10 || pet.sleepiness === 10 || pet.boredom === 10){
 
 		game_status.innerHTML = "GAME OVER";
 
-		setInterval(reset, 2000);
+		setTimeout(reset, 2000);
 		
 		
 	}
@@ -81,10 +106,7 @@ var playButton = document.getElementById('play');
  }
 
 
-
-
-
- setInterval(setIncrease, 4000);
+ setInterval(setIncrease, 6000);
 
 
 
