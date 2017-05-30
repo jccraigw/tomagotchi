@@ -23,7 +23,9 @@ bored_num.innerHTML = pet.boredom;
 var nameButton = document.getElementById('pet_name');
 nameButton.addEventListener("click", function(){
 
-pet.name = document.getElementById('name').value;
+	pet.name = document.getElementById('name').value;
+	var display_name = document.getElementById('display_name');
+	display_name.innerHTML = pet.name;
 
  });
 
@@ -78,7 +80,7 @@ playButton.addEventListener("click", function(){
 
  }
 
- setInterval(ageIncrease, 3000);
+ 
 
  var setIncrease = function(){
 
@@ -105,7 +107,7 @@ playButton.addEventListener("click", function(){
 
  }
 
-
+ setInterval(ageIncrease, 6000);
  setInterval(setIncrease, 6000);
 
 
