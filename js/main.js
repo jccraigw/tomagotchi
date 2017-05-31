@@ -15,6 +15,8 @@ var sleep_num = document.getElementById('sleep#');
 var bored_num = document.getElementById('bored#');
 var game_status = document.getElementById('game_status');
 
+var rank = ["LEVEL 1", "LEVEL 2", "LEVEL 3", "LEVEL 4", "LEVEL 5"];
+
 var morphs =["https://s-media-cache-ak0.pinimg.com/originals/1d/24/c2/1d24c2658cc73ae08509c1f55706cce4.gif", 
 			 "http://recrutement.lorweb.com/bundles/recruitment/images/ajax-loader.gif", 
 			 "http://bradar.ru/sites/default/files/466b422c6a1ce24a6c4e20e62832d72a.jpg", 
@@ -53,22 +55,27 @@ feedButton.addEventListener("click", function(){
  	if(age < 3){
 
  		img.setAttribute('src', morphs[0]);
+ 		game_status.innerHTML =rank[0];
  	}
  	else if(age >= 3 && age < 6){
 
  		img.setAttribute('src', morphs[1]);
+ 		game_status.innerHTML = rank[1];
  	}
  	else if(age >= 6 && age < 9){
 
  		img.setAttribute('src', morphs[2]);
+ 		game_status.innerHTML= rank[2];
  	}
  	else if(age >= 9 && age < 12){
 
  		img.setAttribute('src', morphs[3]);
+ 		game_status.innerHTML =rank[3];
  	}
  	else if(age >= 12){
 
  		img.setAttribute('src', morphs[4]);
+ 		game_status.innerHTML = rank[4];
  	}
 
  }
@@ -77,7 +84,7 @@ var sleep = function(){
 	img.setAttribute('src', "https://media.giphy.com/media/6urLYSWgGgj4s/giphy.gif");
 	var timer = 0;
 
-	setTimeout(checkAge, 2000);
+	
 	
 
 
@@ -94,6 +101,7 @@ lightsButton.addEventListener("click", function(){
 		sleep_num.innerHTML=pet.sleepiness;
 
 		sleep();
+	
 	}
 
 })
@@ -170,8 +178,8 @@ playButton.addEventListener("click", function(){
 
  }
 
- setInterval(ageIncrease, 6000);
- setInterval(setIncrease, 6000);
+ setInterval(ageIncrease, 50000);
+ setInterval(setIncrease, 40000);
 
 
 
