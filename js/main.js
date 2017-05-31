@@ -64,6 +64,7 @@ playButton.addEventListener("click", function(){
 	    age_num.innerHTML = pet.age;
 
 		game_status.innerHTML = "LEVEL 1";
+		img.setAttribute('src', "https://s-media-cache-ak0.pinimg.com/originals/1d/24/c2/1d24c2658cc73ae08509c1f55706cce4.gif");
 
 		
 		
@@ -73,10 +74,34 @@ playButton.addEventListener("click", function(){
 
  }
 
+ var img = document.getElementById('pet_pic');
+
  var ageIncrease = function(){
 
  	pet.age++;
  	age_num.innerHTML = pet.age;
+
+ 	if(pet.age < 3){
+
+ 		img.setAttribute('src', "https://s-media-cache-ak0.pinimg.com/originals/1d/24/c2/1d24c2658cc73ae08509c1f55706cce4.gif");
+ 	}
+ 	else if(pet.age === 3){
+
+ 		img.setAttribute('src', "http://recrutement.lorweb.com/bundles/recruitment/images/ajax-loader.gif");
+ 	}
+ 	else if(pet.age === 6){
+
+ 		img.setAttribute('src', "http://bradar.ru/sites/default/files/466b422c6a1ce24a6c4e20e62832d72a.jpg");
+ 	}
+ 	else if(pet.age === 9){
+
+ 		img.setAttribute('src', "http://www.the-rivalry.com/uploads/2/12413659393995-mario_raccoonMario.gif");
+ 	}
+ 	else if(pet.age >= 12){
+
+ 		img.setAttribute('src', "http://vignette2.wikia.nocookie.net/mario/images/d/dd/Tanooki_Mario_3.gif/revision/latest?cb=20101110170608");
+ 	}
+ 
 
  }
 
