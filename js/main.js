@@ -2,17 +2,17 @@ console.log("linked!");
 
 var pet = {
 
-	hunger: 5,
-	sleepiness: 5,
-	boredom: 5,
+	hunger: 1,
+	sleepiness: 1,
+	boredom: 1,
 	age: 1,
 	name:""
 
 }
-var age_num = document.getElementById('age#');
-var hunger_num = document.getElementById('hunger#');
-var sleep_num = document.getElementById('sleep#');
-var bored_num = document.getElementById('bored#');
+var age_num = document.getElementById('age_num');
+var hunger_num = document.getElementById('hunger_num');
+var sleep_num = document.getElementById('sleep_num');
+var bored_num = document.getElementById('bored_num');
 var game_status = document.getElementById('game_status');
 
 var rank = ["LEVEL 1", "LEVEL 2", "LEVEL 3", "LEVEL 4", "LEVEL 5"];
@@ -186,8 +186,8 @@ playButton.addEventListener("click", function(){
 
  }
 
- setInterval(ageIncrease, 120000);
- setInterval(setIncrease, 50000);
+ setInterval(ageIncrease, 60000);
+ setInterval(setIncrease, 30000);
 
 
 

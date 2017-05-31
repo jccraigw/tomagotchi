@@ -5,35 +5,38 @@
 	<link rel="stylesheet" type="text/css" href="styles/style.css">
 </head>
 <body>
-	<div class="pet">
-		<img id="pet_pic" src="https://s-media-cache-ak0.pinimg.com/originals/1d/24/c2/1d24c2658cc73ae08509c1f55706cce4.gif">
+
+	<div class="wrapper">
+		<div class="controls">
+			<button id="feed">Feed</button>
+			<button id="lights">Lights</button>
+			<button id="play">Play</button>
+			<input type="text" id="name" placeholder="Name your character">
+			<button id="pet_name">Name Pet</button>
+		</div>
+		<div class="hub">
+
+			<span class="hub_main" id="age">Age:</span>
+			<span class="hub_main"  id="age_num"></span>
+			<br>
+			<span class="hub_main"  id="hunger">Hunger (1-10 scale):</span>
+			<span class="hub_main"  id="hunger_num"></span>
+			<br>
+			<span class="hub_main"  id="sleep">Sleepiness (1-10 scale):</span>
+			<span class="hub_main"  id="sleep_num"></span>
+			<br>
+			<span class="hub_main"  id="bored">Boredom (1-10 scale):</span>
+			<span class="hub_main"  id="bored_num"></span>
+			<br>
+
+		</div>
+		<div id="game_status">LEVEL 1</div>
 		<div id="display_name"></div>
+		<div class="pet">
+			<img id="pet_pic" src="https://s-media-cache-ak0.pinimg.com/originals/1d/24/c2/1d24c2658cc73ae08509c1f55706cce4.gif">
+			
+		</div>
 	</div>
-
-	<div class="controls">
-		<button id="feed">Feed</button>
-		<button id="lights">Lights</button>
-		<button id="play">Play</button>
-		<input type="text" id="name" placeholder="Name your character">
-		<button id="pet_name">Name Pet</button>
-	</div>
-	<div class="hub">
-
-		<span id="age">Age:</span>
-		<span id="age#"></span>
-		<br>
-		<span id="hunger">Hunger (1-10 scale):</span>
-		<span id="hunger#"></span>
-		<br>
-		<span id="sleep">Sleepiness (1-10 scale):</span>
-		<span id="sleep#"></span>
-		<br>
-		<span id="bored">Boredom (1-10 scale):</span>
-		<span id="bored#"></span>
-		<br>
-
-	</div>
-	<div id="game_status">LEVEL 1</div>
 <script src="js/main.js"></script>
 </body>
 </html>

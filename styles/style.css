@@ -13,11 +13,65 @@ html, body{
 
 
 	width: 100px;
-	width: 100px;
+	height: 100px;
 }
 body{
 
 	background-image: url('http://orig15.deviantart.net/8bed/f/2015/058/a/8/smb1_background_by_steamerthesteamtrain-d8jq7ea.png');
 	background-repeat: no-repeat;
 	background-size: cover;
-}	
+}
+.wrapper{
+	height: 510px;
+	
+
+}
+.controls{
+
+	margin-top: 50px;
+	margin-bottom: 25px;
+	
+ 
+ 	height: 60px;
+ 	display: flex;
+		display: row;
+
+}
+.hub_main{
+
+	margin: 0 10px;
+	height: 50px;
+	flex-grow: 1;
+
+} 	
+.hub{
+
+		margin-bottom: 20px;
+		display: flex;
+		display: row;
+	
+
+
+}
+#game_status{
+
+	text-align: center;
+}
+.pet{
+	
+	
+	
+	width: 100px;
+	height: 100px; 
+	
+	margin: 0 auto;
+
+	margin-top: 140px;
+
+}
+#display_name{
+
+	height: 25px;
+	margin-top: 10px;
+	text-align: center;
+}
