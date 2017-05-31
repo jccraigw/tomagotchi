@@ -38,9 +38,14 @@ nameButton.addEventListener("click", function(){
 var feedButton = document.getElementById('feed');
 feedButton.addEventListener("click", function(){
 
-	pet.hunger-=2;
-	hunger_num.innerHTML= pet.hunger;
+	if(pet.hunger === 0){
 
+
+	}else{
+
+		pet.hunger-=1;
+		hunger_num.innerHTML= pet.hunger;
+    }
 
 })
  var checkAge = function(age){
@@ -81,18 +86,26 @@ var sleep = function(){
 var lightsButton = document.getElementById('lights');
 lightsButton.addEventListener("click", function(){
 
-	pet.sleepiness-=2;
-	sleep_num.innerHTML=pet.sleepiness;
+	if(pet.sleepiness === 0){
 
-	sleep();
+	}
+	else{
+		pet.sleepiness-=1;
+		sleep_num.innerHTML=pet.sleepiness;
+
+		sleep();
+	}
 
 })
 var playButton = document.getElementById('play');
 playButton.addEventListener("click", function(){
 
-	pet.boredom-=2;
-	bored_num.innerHTML=pet.boredom;
+	if(pet.boredom === 0){
 
+	}else{
+		pet.boredom-=1;
+		bored_num.innerHTML=pet.boredom;
+	}
 })
 
  var reset = function() {
