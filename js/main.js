@@ -15,6 +15,12 @@ var sleep_num = document.getElementById('sleep#');
 var bored_num = document.getElementById('bored#');
 var game_status = document.getElementById('game_status');
 
+var morphs =["https://s-media-cache-ak0.pinimg.com/originals/1d/24/c2/1d24c2658cc73ae08509c1f55706cce4.gif", 
+			 "http://recrutement.lorweb.com/bundles/recruitment/images/ajax-loader.gif", 
+			 "http://bradar.ru/sites/default/files/466b422c6a1ce24a6c4e20e62832d72a.jpg", 
+			 "http://www.the-rivalry.com/uploads/2/12413659393995-mario_raccoonMario.gif",
+			 "http://vignette2.wikia.nocookie.net/mario/images/d/dd/Tanooki_Mario_3.gif/revision/latest?cb=20101110170608"];
+
 age_num.innerHTML = pet.age;
 hunger_num.innerHTML= pet.hunger;
 sleep_num.innerHTML = pet.sleepiness;
@@ -37,11 +43,48 @@ feedButton.addEventListener("click", function(){
 
 
 })
+ var checkAge = function(age){
+
+ 	if(age < 3){
+
+ 		img.setAttribute('src', morphs[0]);
+ 	}
+ 	else if(age >= 3 && age < 6){
+
+ 		img.setAttribute('src', morphs[1]);
+ 	}
+ 	else if(age >= 6 && age < 9){
+
+ 		img.setAttribute('src', morphs[2]);
+ 	}
+ 	else if(age >= 9 && age < 12){
+
+ 		img.setAttribute('src', morphs[3]);
+ 	}
+ 	else if(age >= 12){
+
+ 		img.setAttribute('src', morphs[4]);
+ 	}
+
+ }
+var sleep = function(){
+
+	img.setAttribute('src', "https://media.giphy.com/media/6urLYSWgGgj4s/giphy.gif");
+	var timer = 0;
+
+	setTimeout(checkAge, 2000);
+	
+
+
+}
+
 var lightsButton = document.getElementById('lights');
 lightsButton.addEventListener("click", function(){
 
 	pet.sleepiness-=2;
 	sleep_num.innerHTML=pet.sleepiness;
+
+	sleep();
 
 })
 var playButton = document.getElementById('play');
@@ -81,31 +124,13 @@ playButton.addEventListener("click", function(){
  	pet.age++;
  	age_num.innerHTML = pet.age;
 
- 	if(pet.age < 3){
-
- 		img.setAttribute('src', "https://s-media-cache-ak0.pinimg.com/originals/1d/24/c2/1d24c2658cc73ae08509c1f55706cce4.gif");
- 	}
- 	else if(pet.age === 3){
-
- 		img.setAttribute('src', "http://recrutement.lorweb.com/bundles/recruitment/images/ajax-loader.gif");
- 	}
- 	else if(pet.age === 6){
-
- 		img.setAttribute('src', "http://bradar.ru/sites/default/files/466b422c6a1ce24a6c4e20e62832d72a.jpg");
- 	}
- 	else if(pet.age === 9){
-
- 		img.setAttribute('src', "http://www.the-rivalry.com/uploads/2/12413659393995-mario_raccoonMario.gif");
- 	}
- 	else if(pet.age >= 12){
-
- 		img.setAttribute('src', "http://vignette2.wikia.nocookie.net/mario/images/d/dd/Tanooki_Mario_3.gif/revision/latest?cb=20101110170608");
- 	}
+ 	
+ 	checkAge(pet.age);
  
 
  }
 
- 
+
 
  var setIncrease = function(){
 
