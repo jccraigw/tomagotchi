@@ -101,6 +101,8 @@ lightsButton.addEventListener("click", function(){
 		sleep_num.innerHTML=pet.sleepiness;
 
 		sleep();
+
+		setTimeout(checker, 4000)
 	
 	}
 
@@ -151,6 +153,12 @@ playButton.addEventListener("click", function(){
 
  }
 
+ var checker = function(){
+
+
+ 	checkAge(pet.age);
+ }
+
 
 
  var setIncrease = function(){
@@ -178,8 +186,8 @@ playButton.addEventListener("click", function(){
 
  }
 
- setInterval(ageIncrease, 50000);
- setInterval(setIncrease, 40000);
+ setInterval(ageIncrease, 120000);
+ setInterval(setIncrease, 50000);
 
 
 

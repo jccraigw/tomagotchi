@@ -12,6 +12,12 @@ html, body{
 #pet_pic{
 
 
-	width: 300px;
-	width: 300px;
+	width: 100px;
+	width: 100px;
 }
+body{
+
+	background-image: url('http://orig15.deviantart.net/8bed/f/2015/058/a/8/smb1_background_by_steamerthesteamtrain-d8jq7ea.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+}	
