@@ -17,11 +17,11 @@ var game_status = document.getElementById('game_status');
 
 var rank = ["LEVEL 1", "LEVEL 2", "LEVEL 3", "LEVEL 4", "LEVEL 5"];
 
-var morphs =["https://s-media-cache-ak0.pinimg.com/originals/1d/24/c2/1d24c2658cc73ae08509c1f55706cce4.gif", 
-			 "http://recrutement.lorweb.com/bundles/recruitment/images/ajax-loader.gif", 
-			 "http://bradar.ru/sites/default/files/466b422c6a1ce24a6c4e20e62832d72a.jpg", 
-			 "http://www.the-rivalry.com/uploads/2/12413659393995-mario_raccoonMario.gif",
-			 "http://vignette2.wikia.nocookie.net/mario/images/d/dd/Tanooki_Mario_3.gif/revision/latest?cb=20101110170608"];
+var morphs =["http://bestanimations.com/Animals/Mammals/Cats/Lions/lioncubanimation-21.gif", 
+			 "https://68.media.tumblr.com/3a7a9f0ce8dca8acac5619184bedc5bd/tumblr_inline_ns6m6eyhri1rbem7u_500.gif", 
+			 "https://www.mylionking.com/resources/site_images/animated_gif_000_simba_hakuna_matata.gif", 
+			 "http://bestanimations.com/Animals/Mammals/Cats/Lions/lion-king-animated-gif-6.gif"
+			 ];
 
 age_num.innerHTML = pet.age;
 hunger_num.innerHTML= pet.hunger;
@@ -72,11 +72,11 @@ feedButton.addEventListener("click", function(){
  		img.setAttribute('src', morphs[3]);
  		game_status.innerHTML =rank[3];
  	}
- 	else if(age >= 12){
+ 	// else if(age >= 12){
 
- 		img.setAttribute('src', morphs[4]);
- 		game_status.innerHTML = rank[4];
- 	}
+ 	// 	img.setAttribute('src', morphs[4]);
+ 	// 	game_status.innerHTML = rank[4];
+ 	// }
 
  }
 var sleep = function(){
@@ -130,7 +130,7 @@ playButton.addEventListener("click", function(){
 	    age_num.innerHTML = pet.age;
 
 		game_status.innerHTML = "LEVEL 1";
-		img.setAttribute('src', "https://s-media-cache-ak0.pinimg.com/originals/1d/24/c2/1d24c2658cc73ae08509c1f55706cce4.gif");
+		img.setAttribute('src', "http://bestanimations.com/Animals/Mammals/Cats/Lions/lioncubanimation-21.gif");
 
 		
 		

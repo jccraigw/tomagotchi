@@ -1,7 +1,7 @@
-*{
+/**{
 
 	border: 1px solid red !important;
-}
+}*/
 html, body{
 
 	margin: 0;
@@ -12,17 +12,17 @@ html, body{
 #pet_pic{
 
 
-	width: 100px;
-	height: 100px;
+	width: 300px;
+	height: 300px;
 }
 body{
 
-	background-image: url('http://orig15.deviantart.net/8bed/f/2015/058/a/8/smb1_background_by_steamerthesteamtrain-d8jq7ea.png');
+	background-image: url('http://www.southafricaadventures.com/wp-content/uploads/2016/10/Pilanesberg-Safari-Tours_South-Africa_4.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
 }
 .wrapper{
-	height: 510px;
+	height: 600px;
 	
 
 }
@@ -37,11 +37,20 @@ body{
 		display: row;
 
 }
+.controls_main{
+
+	flex-grow: 1;
+}
 .hub_main{
 
-	margin: 0 10px;
+	
 	height: 50px;
 	flex-grow: 1;
+	background-color: grey;
+	text-align: center;
+	line-height: 50px;
+	vertical-align: middle;
+
 
 } 	
 .hub{
@@ -49,6 +58,7 @@ body{
 		margin-bottom: 20px;
 		display: flex;
 		display: row;
+
 	
 
 
@@ -61,12 +71,12 @@ body{
 	
 	
 	
-	width: 100px;
-	height: 100px; 
+	width: 300px;
+	height: 300px; 
 	
 	margin: 0 auto;
 
-	margin-top: 140px;
+	margin-top: 30px;
 
 }
 #display_name{
