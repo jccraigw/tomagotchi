@@ -35,21 +35,24 @@ body{
  	height: 60px;
  	display: flex;
 		display: row;
+		font-size: 20px;
 
 }
 .controls_main{
 
 	flex-grow: 1;
+	font-size: 20px;
 }
 .hub_main{
 
 	
-	height: 50px;
+	height: 60px;
 	flex-grow: 1;
-	background-color: grey;
+	background-color: #eee;
 	text-align: center;
 	line-height: 50px;
 	vertical-align: middle;
+	font-size: 20px;
 
 
 } 	
@@ -63,9 +66,32 @@ body{
 
 
 }
+#age_num{
+
+	background-color: #000000;
+	color: #ff0000;
+}
+#hunger_num{
+
+	background-color: #000000;
+	color: #ff0000;
+
+}
+#sleep_num{
+	background-color: #000000;
+	color: #ff0000;
+
+}
+#bored_num{
+
+	background-color: #000000;
+	color: #ff0000;
+}
 #game_status{
 
-	text-align: center;
+	text-align: left;
+	font-size: 25px;
+	color: #ffffff;
 }
 .pet{
 	
@@ -76,28 +102,35 @@ body{
 	
 	margin: 0 auto;
 
-	margin-top: 30px;
+	margin-bottom: 10px;
 
 }
+
 #speech{
 
 	visibility: hidden;
+	
 	position: absolute;
-	left: 340px;
-	top:250px;
+	left: 360px;
+	top: 200px;
 	width:200px;
 	height: 80px;
 	text-align: center;
 	z-index: 1000;
-	background-color: white;
-	border-radius: 100px;
+	/*background-color: white;*/
+	float: left;
+	
 	line-height: 50px;
 	vertical-align: middle;
 
 }
+#speech p{
+	margin-top: -150px;
+}
 #display_name{
 
-	height: 25px;
+	height: 50px;
 	margin-top: 10px;
-	text-align: center;
+	text-align: left;
+	font-size: 40px;
 }
