@@ -163,6 +163,17 @@ var dialog = function(){
 					setTimeout(dialog_off, 4000);
 				
 
+			}else{
+
+				
+				var talk = document.getElementById("talk");
+				var p = talk.getElementsByTagName('p')[0];
+				p.innerHTML = speech_array[random];
+
+				var el = document.getElementById("speech");
+				el.style.visibility = "visible";
+				setTimeout(dialog_off, 4000);
+
 			}
 		}else{
 
