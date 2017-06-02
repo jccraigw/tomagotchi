@@ -23,6 +23,10 @@ var morphs =["http://bestanimations.com/Animals/Mammals/Cats/Lions/lioncubanimat
 			 "http://bestanimations.com/Animals/Mammals/Cats/Lions/lion-king-animated-gif-6.gif"
 			 ];
 
+var speech_array = ["I'm hungry", "I'm tired", "I'm bored"];
+
+var speech_counter = 0;
+
 age_num.innerHTML = pet.age;
 hunger_num.innerHTML= pet.hunger;
 sleep_num.innerHTML = pet.sleepiness;
@@ -36,6 +40,152 @@ nameButton.addEventListener("click", function(){
 	display_name.innerHTML = pet.name;
 
  });
+
+var dialog_hello = function(){
+
+	var el = document.getElementById("speech");
+	el.style.visibility = "visible";
+
+	speech_counter++;
+
+	setTimeout(dialog_off, 4000);
+	setInterval(dialog, 10000);
+}
+
+var dialog = function(){
+
+	var random = Math.floor(Math.random() * (2 - 0 + 1)) + 0;
+	
+		//add dialog logic here, if numbers lower than five then do below, 
+		//else present by which is the greatest with hunger having more president
+
+		if(pet.hunger < 5 && pet.sleepiness < 5 && pet.boredom < 5){
+		
+			var talk = document.getElementById("talk");
+			var p = talk.getElementsByTagName('p')[0];
+			p.innerHTML = speech_array[random];
+
+			var el = document.getElementById("speech");
+			el.style.visibility = "visible";
+			setTimeout(dialog_off, 4000);
+		}else if(pet.hunger > 5 && pet.sleepiness > 5 && pet.boredom > 5){
+
+			if(pet.hunger > pet.sleepiness && pet.hunger > pet.boredom){
+
+				var talk = document.getElementById("talk");
+				var p = talk.getElementsByTagName('p')[0];
+				p.innerHTML = speech_array[0];
+
+				var el = document.getElementById("speech");
+				el.style.visibility = "visible";
+				setTimeout(dialog_off, 4000);
+			}else if(pet.hunger < pet.sleepiness && pet.hunger < pet.boredom){
+
+				var random_two = Math.floor(Math.random() * (1 - 0 + 1)) + 0;
+				var getindex =0;
+				if(random_two === 1){
+
+					getindex = 2;
+
+				var talk = document.getElementById("talk");
+				var p = talk.getElementsByTagName('p')[0];
+				p.innerHTML = speech_array[getindex];
+
+				var el = document.getElementById("speech");
+				el.style.visibility = "visible";
+				setTimeout(dialog_off, 4000);
+				}else{
+
+
+					var talk = document.getElementById("talk");
+				var p = talk.getElementsByTagName('p')[0];
+				p.innerHTML = speech_array[1];
+
+				var el = document.getElementById("speech");
+				el.style.visibility = "visible";
+				setTimeout(dialog_off, 4000);
+				}
+
+			}else if(pet.sleepiness > pet.hunger && pet.sleepiness > pet.boredom){
+
+				var talk = document.getElementById("talk");
+				var p = talk.getElementsByTagName('p')[0];
+				p.innerHTML = speech_array[1];
+
+				var el = document.getElementById("speech");
+				el.style.visibility = "visible";
+				setTimeout(dialog_off, 4000);
+			}else if(pet.sleepiness < pet.hunger && pet.sleepiness < pet.boredom){
+
+				var random_two = Math.floor(Math.random() * (1 - 0 + 1)) + 0;
+				var getindex =0;
+				if(random_two === 1){
+
+					getindex = 2;
+					var talk = document.getElementById("talk");
+					var p = talk.getElementsByTagName('p')[0];
+					p.innerHTML = speech_array[getindex];
+
+					var el = document.getElementById("speech");
+					el.style.visibility = "visible";
+					setTimeout(dialog_off, 4000);
+				}else{
+
+					var talk = document.getElementById("talk");
+					var p = talk.getElementsByTagName('p')[0];
+					p.innerHTML = speech_array[random_two];
+
+					var el = document.getElementById("speech");
+					el.style.visibility = "visible";
+					setTimeout(dialog_off, 4000);
+				}
+
+			}else if(pet.boredom > pet.hunger && pet.boredom > pet.sleepiness){
+
+				var talk = document.getElementById("talk");
+				var p = talk.getElementsByTagName('p')[0];
+				p.innerHTML = speech_array[2];
+
+				var el = document.getElementById("speech");
+				el.style.visibility = "visible";
+				setTimeout(dialog_off, 4000);
+			}else if(pet.boredom < pet.hunger && pet.boredom < pet.sleepiness){
+
+				var random_two = Math.floor(Math.random() * (1 - 0 + 1)) + 0;
+			
+
+					var talk = document.getElementById("talk");
+					var p = talk.getElementsByTagName('p')[0];
+					p.innerHTML = speech_array[random_two];
+
+					var el = document.getElementById("speech");
+					el.style.visibility = "visible";
+					setTimeout(dialog_off, 4000);
+				
+
+			}
+		}else{
+
+				
+				var talk = document.getElementById("talk");
+				var p = talk.getElementsByTagName('p')[0];
+				p.innerHTML = speech_array[random];
+
+				var el = document.getElementById("speech");
+				el.style.visibility = "visible";
+				setTimeout(dialog_off, 4000);
+
+			}
+	
+
+}
+
+var dialog_off = function(){
+
+	var el = document.getElementById("speech");
+	el.style.visibility = "hidden";
+
+}
 
 var feedButton = document.getElementById('feed');
 feedButton.addEventListener("click", function(){
@@ -81,7 +231,7 @@ feedButton.addEventListener("click", function(){
  }
 var sleep = function(){
 
-	img.setAttribute('src', "https://media.giphy.com/media/6urLYSWgGgj4s/giphy.gif");
+	img.setAttribute('src', "http://rs1035.pbsrc.com/albums/a436/kamaria_syrtis/366-75.gif~c200");
 	var timer = 0;
 
 	
@@ -128,6 +278,7 @@ playButton.addEventListener("click", function(){
 	    sleep_num.innerHTML = pet.sleepiness;
 	    bored_num.innerHTML = pet.boredom;
 	    age_num.innerHTML = pet.age;
+	    speech_counter = 0;
 
 		game_status.innerHTML = "LEVEL 1";
 		img.setAttribute('src', "http://bestanimations.com/Animals/Mammals/Cats/Lions/lioncubanimation-21.gif");
@@ -186,8 +337,10 @@ playButton.addEventListener("click", function(){
 
  }
 
- setInterval(ageIncrease, 60000);
- setInterval(setIncrease, 30000);
+ setInterval(ageIncrease, 40000);
+ setInterval(setIncrease, 10000);
+ setTimeout(dialog_hello, 4000);
+ 
 
 
 
