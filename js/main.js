@@ -26,6 +26,12 @@ var morphs =["http://bestanimations.com/Animals/Mammals/Cats/Lions/lioncubanimat
 var speech_array = ["I'm hungry", "I'm tired", "I'm bored"];
 
 var speech_counter = 0;
+ var position = 3;
+ var right = true;
+
+  var img = document.getElementById('pet_pic');
+   var img2 = document.getElementById('pet_pic2');
+ var img3 = document.getElementById('pet_pic1');
 
 age_num.innerHTML = pet.age;
 hunger_num.innerHTML= pet.hunger;
@@ -49,7 +55,7 @@ var dialog_hello = function(){
 	speech_counter++;
 
 	setTimeout(dialog_off, 4000);
-	setInterval(dialog, 10000);
+	setInterval(dialog, 32000);
 }
 
 var dialog = function(){
@@ -211,26 +217,38 @@ feedButton.addEventListener("click", function(){
     }
 
 })
+
+
+
+
  var checkAge = function(age){
 
  	if(age < 3){
 
  		img.setAttribute('src', morphs[0]);
+ 		img2.setAttribute('src', morphs[0]);
+ 		img3.setAttribute('src', morphs[0]);
  		game_status.innerHTML =rank[0];
  	}
  	else if(age >= 3 && age < 6){
 
  		img.setAttribute('src', morphs[1]);
+ 		img2.setAttribute('src', morphs[1]);
+ 		img3.setAttribute('src', morphs[1]);
  		game_status.innerHTML = rank[1];
  	}
  	else if(age >= 6 && age < 9){
 
  		img.setAttribute('src', morphs[2]);
+ 		img2.setAttribute('src', morphs[2]);
+ 		img3.setAttribute('src', morphs[2]);
  		game_status.innerHTML= rank[2];
  	}
  	else if(age >= 9 && age < 12){
 
  		img.setAttribute('src', morphs[3]);
+ 		img2.setAttribute('src', morphs[3]);
+ 		img3.setAttribute('src', morphs[3]);
  		game_status.innerHTML =rank[3];
  	}
  	// else if(age >= 12){
@@ -243,6 +261,8 @@ feedButton.addEventListener("click", function(){
 var sleep = function(){
 
 	img.setAttribute('src', "http://rs1035.pbsrc.com/albums/a436/kamaria_syrtis/366-75.gif~c200");
+	img2.setAttribute('src', "http://rs1035.pbsrc.com/albums/a436/kamaria_syrtis/366-75.gif~c200");
+	img3.setAttribute('src', "http://rs1035.pbsrc.com/albums/a436/kamaria_syrtis/366-75.gif~c200");
 	var timer = 0;
 
 	
@@ -299,6 +319,13 @@ playButton.addEventListener("click", function(){
 	    bored_num.innerHTML = pet.boredom;
 	    age_num.innerHTML = pet.age;
 	    speech_counter = 0;
+	    position =3;
+	    right = true;
+
+	    	img.style.opacity = "1";
+ 			// debugger;
+ 			img2.style.opacity = "0";
+ 			img3.style.opacity = "0";
 
 		game_status.innerHTML = "LEVEL 1";
 		img.setAttribute('src', "http://bestanimations.com/Animals/Mammals/Cats/Lions/lioncubanimation-21.gif");
@@ -311,7 +338,7 @@ playButton.addEventListener("click", function(){
 
  }
 
- var img = document.getElementById('pet_pic');
+
 
  var ageIncrease = function(){
 
@@ -358,48 +385,63 @@ playButton.addEventListener("click", function(){
  }
 
 
- var position = 3;
- var right = true;
-
-// var img2 = document.getElementById('pet_pic1');
-// var img3 = document.getElementById('pet_pic2');
-
-//  setInterval(function(){
-
-//  	if(right){
 
 
-//  		position--;
 
-//  		if(position === 1){
+ setInterval(function(){
 
-//  			right = false;
-//  		}
+ 	if(right){
 
 
-//  	}
-//  	else{
+ 		position--;
+
+ 		if(position === 1){
+
+ 			right = false;
+ 		}
+
+
+ 	}
+ 	else{
 
  		
-//  		position ++;
+ 		position ++;
 
-//  		if(position === 3){
+ 		if(position === 3){
 
-//  			right = true;
-//  		}
-//  	}
+ 			right = true;
+ 		}
+ 	}
 
-//  	console.log(position);
+ 	console.log(position);
 
-//  			img.style.opacity = "0";
-//  			document.getElementById('pet_pic' + position).style.opacity = "1";
+ 		if(position === 3){
+ 			img.style.opacity = "1";
+ 			document.getElementById('pet_pic2').style.opacity = "0";
 
- 
+ 		}else if(position ===2){
+
+
+
+ 			img.style.opacity = "0";
+ 			// debugger;
+ 			img2.style.opacity = "1";
+ 			img3.style.opacity = "0";
+
+
+
+ 	}else{
+
+ 		img.style.opacity = "0";
+ 			// debugger;
+ 			img3.style.opacity = "1";
+ 			img2.style.opacity = "0";
+ 	}
 
 
  	
 
-//  }, 1000)
+ }, 8000)
 
 
 
