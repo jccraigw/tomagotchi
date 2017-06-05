@@ -448,7 +448,7 @@ playButton.addEventListener("click", function(){
 
 
 
- setInterval(ageIncrease, 40000);
+ setInterval(ageIncrease, 20000);
  setInterval(setIncrease, 10000);
  setTimeout(dialog_hello, 4000);
 
