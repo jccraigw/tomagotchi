@@ -268,6 +268,9 @@ lightsButton.addEventListener("click", function(){
 	}
 
 })
+
+
+
 var playButton = document.getElementById('play');
 playButton.addEventListener("click", function(){
 
@@ -277,6 +280,12 @@ playButton.addEventListener("click", function(){
 		pet.boredom-=1;
 		bored_num.innerHTML=pet.boredom;
 	}
+
+
+
+ 	
+
+
 })
 
  var reset = function() {
@@ -348,13 +357,73 @@ playButton.addEventListener("click", function(){
 
  }
 
+
+ var position = 3;
+ var right = true;
+
+// var img2 = document.getElementById('pet_pic1');
+// var img3 = document.getElementById('pet_pic2');
+
+//  setInterval(function(){
+
+//  	if(right){
+
+
+//  		position--;
+
+//  		if(position === 1){
+
+//  			right = false;
+//  		}
+
+
+//  	}
+//  	else{
+
+ 		
+//  		position ++;
+
+//  		if(position === 3){
+
+//  			right = true;
+//  		}
+//  	}
+
+//  	console.log(position);
+
+//  			img.style.opacity = "0";
+//  			document.getElementById('pet_pic' + position).style.opacity = "1";
+
+ 
+
+
+ 	
+
+//  }, 1000)
+
+
+
+
+
+
  setInterval(ageIncrease, 40000);
  setInterval(setIncrease, 10000);
  setTimeout(dialog_hello, 4000);
+
+
+  
+
+
+
  
 
 
 
+
+
+
+
+ 
 
 
  
